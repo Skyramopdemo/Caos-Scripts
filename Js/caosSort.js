@@ -22,7 +22,7 @@ function voidSort(array){
  * @param {*} start 
  * @returns 
  */
-function integerSort(array, start) {
+function integerSort(array, start = 1) {
   const n = [];
   for (let i = 0; i < array.length; i++) {
       n[i] = i + start;
@@ -36,12 +36,12 @@ function integerSort(array, start) {
  * @returns 
  */
 function communistSort(array){
-  const sum = 0;
-  const arr = [];
+  var sum = 0;
+  var arr = [];
   for (let i = 0; i < array.length; i++) {
-      sum += array[i];
+    sum += array[i];
   }
-  const med = sum / array.length;
+  var med = sum / array.length;
   for (let i = 0; i < array.length; i++) {
       arr[i] = med;
   }
@@ -54,12 +54,16 @@ function communistSort(array){
  * @returns 
  */
 function captalistSort(array) {
-  const sum = 0;
+  var sum = 0;
   for (let i = 0; i < array.length; i++) {
       sum += array[i];
       array[i] = 0;
   }
-  array[0] = sum;
+  var rest = sum
+  for (let i = 0; i < array.length; i++) {
+    var rest = rest/2
+    array[i] = rest.toFixed(2)
+  }
   return array;
 }
 

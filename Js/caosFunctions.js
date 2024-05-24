@@ -20,4 +20,3 @@ return o[n] = "⠀⠁⠂⠃⠄⠅⠆⠇⠈⠉⠊⠋⠌⠍⠎⠏⠐⠑⠒⠓⠔�
 function toBraile(string) {
     return string.split("").map(c => map[c]).join("");
 }
-

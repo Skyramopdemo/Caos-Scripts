@@ -8,12 +8,49 @@
 <body>
     
 
+    <div class="container">
+
+        <h1>CaosSort</h1>
+
+        <button onclick="caosSort()">Gerar array e realizar testes</button>
+        <p id="originalArray"></p>
+
+        <p>voidSort: <span id="voidSort"></span></p>
+        <p>integerSort: <span id="integerSort"></span></p>
+        <p>communistSort: <span id="communistSort"></span></p>
+        <p>captalistSort: <span id="captalistSort"></span></p>
+    </div>
+
+    <div class="container">
+
+        <h1>CaosFunctions</h1>
+
+        <button onclick="caosFunction()">Testar funções</button>
+    </div>
 
 
-
+</body>
 <script src="/Js/caosSort.js"></script>
 <script src="/Js/caosFunctions.js"></script>
 <script src="/Js/caosClasses.js"></script>
 <script src="/Js/caosArrays.js"></script>
-</body>
+<script>
+    function caosSort(){
+        var array = randNumberArray(20, 1)
+        
+        var original = document.getElementById('originalArray')
+        original.innerHTML = array
+
+
+        document.getElementById('voidSort').innerHTML = voidSort(array)
+        document.getElementById('integerSort').innerHTML = integerSort(array)
+        document.getElementById('communistSort').innerHTML = communistSort(array)
+        document.getElementById('captalistSort').innerHTML = captalistSort(array)
+    }
+
+    function caosFunction(){
+
+    }
+
+</script>
 </html>
